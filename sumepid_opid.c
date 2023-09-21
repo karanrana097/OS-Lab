@@ -1,36 +1,41 @@
-//WAP to in which parent calculates sum of even process and child process calculates sum of odd processes.
+// Implement a program that computers sum of odd numbers in parent process and sum of even numbers in child process using fork system call.
 #include<stdio.h>
+#include<stdlib.h>
 #include<unistd.h>
-#include<sys/types.h>
 int main()
 {
-    int a[10];
-    int n;
-    printf("Enter size of array : ");
-    scanf("%d",&n);
-    for(int i=0;i<n;i++)
+    int arr[10];
+    int a,n,sume=0,sumo=0;
+    printf("Enter Size of an Array :"); scanf("%d",&n);
+    printf("Enter Array:\n");
+    for(int i=0;i<n;i++) 
     {
-        scanf("%d",&a[i]);
+        scanf("%d",&arr[i]);
     }
-    
-    int m=fork();
-    int sum = 0;
-    if(m>0)
-    {
+    a=fork();
+    if(a>0){
         for(int i=0;i<n;i++)
         {
-            if(a[i]%2==0)
-                sum+=a[i];
+            if(arr[i]%2!=0)
+            {
+                sumo=sumo+arr[i];
+            }
         }
-        printf("\nParent process executed and sum is %d :",sum);
+        printf("Sum of odd(Parent)=%d\n",sumo); 
+        exit(0);
     }
-    else
+    else if(a==0)
     {
-        for(int i=0;i<n;i++)
+        for(int i=0;i<n;i++) 
         {
-            if(a[i]%2!=0)
-                sum+=a[i];
+            if(arr[i]%2==0)
+            {
+                sume=sume+arr[i];
+            }
         }
-        printf("\nChild process executed and sum is %d :",sum);
+        printf("sum of even(child)= %d\n",sume); exit(0);
+    }else
+    {
+        printf("unsuccessful ceation of process\n");
     }
 }
