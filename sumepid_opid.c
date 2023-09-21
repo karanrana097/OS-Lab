@@ -1,4 +1,4 @@
-// Implement a program that computers sum of odd numbers in parent process and sum of even numbers in child process using fork system call.
+// 4. Implement a program that computers sum of odd numbers in parent process and sum of even numbers in child process using fork system call.
 #include<stdio.h>
 #include<stdlib.h>
 #include<unistd.h>
