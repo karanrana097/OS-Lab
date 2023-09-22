@@ -1,4 +1,4 @@
-// 2. Implementation of multiple fork( )
+// 2. Implementation of multiple fork( ) ans use of PID and  PPID.
 #include<stdio.h>
 #include<unistd.h>
 int main()

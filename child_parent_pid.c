@@ -12,7 +12,7 @@ int main()
     }
     if(pid>0) 
     {
-        printf("Child process returns some value to its parent"); 
+        printf("Child process returns some value to its parent\n"); 
     }
     return 0; 
 }

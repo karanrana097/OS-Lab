@@ -17,7 +17,7 @@ int main()
     else if(id==0)
     {
         printf("Child process\n");
-        sleep(50); 
+        sleep(5); 
         printf("%d\t%d\n",getpid(),getppid());
     }
 }

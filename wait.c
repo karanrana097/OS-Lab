@@ -9,7 +9,7 @@ int main()
     id=fork();
     if(id==0)
     {
-        for(i=0;i<10;i++)
+        for(i=0;i<2;i++)
         {
             printf("Hello I am Child\n");
         }
@@ -17,9 +17,9 @@ int main()
     else if(id>0)
     {
         printf("HELLO\n");
-        sleep(5);
+        //sleep(5);
         wait(NULL);
-        for(i=0;i<10;i++)
+        for(i=0;i<2;i++)
         {
             printf("Hello I am parent\n");
         }

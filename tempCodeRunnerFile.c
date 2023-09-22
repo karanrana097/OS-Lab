@@ -1,8 +1,1 @@
-#include<stdio.h>
-#include<unistd.h>
-int main()
-{ 
-    fork();
-    printf("hello");
-    return 0; 
-}
+//8.1 Implement FCFS (First Come First Served) Scheduling Algorithm

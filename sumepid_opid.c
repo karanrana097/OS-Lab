@@ -1,4 +1,4 @@
-// 4. Implement a program that computers sum of odd numbers in parent process and sum of even numbers in child process using fork system call.
+// 4. Implement a program that computes sum of odd numbers in parent process and sum of even numbers in child process using fork system call.
 #include<stdio.h>
 #include<stdlib.h>
 #include<unistd.h>
@@ -6,7 +6,8 @@ int main()
 {
     int arr[10];
     int a,n,sume=0,sumo=0;
-    printf("Enter Size of an Array :"); scanf("%d",&n);
+    printf("Enter Size of Array :"); 
+    scanf("%d",&n);
     printf("Enter Array:\n");
     for(int i=0;i<n;i++) 
     {
