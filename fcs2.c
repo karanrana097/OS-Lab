@@ -14,9 +14,12 @@ int main()
     }
     for(i=0 ; i<5 ; i++)
     {
-        tat[i] = wait[i] + burst[i]; sum_wait+=wait[i]; sum_tat+=tat[i];
+        tat[i] = wait[i] + burst[i]; 
+        sum_wait+=wait[i]; 
+        sum_tat+=tat[i];
     }
     avg_w = sum_wait/5.0;
-    avg_t = sum_tat/5.0; printf("%f %f",avg_w , avg_t); 
+    avg_t = sum_tat/5.0; 
+    printf("%f %f",avg_w , avg_t); 
     return 0;
 }
