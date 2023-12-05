@@ -12,7 +12,6 @@ int main()
         printf("parent process\n"); 
         printf("%d\t%d\n",getpid(),getppid()); 
         exit(0);
-        printf("Karan");
     }
     else if(id==0)
     {
